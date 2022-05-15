@@ -8,7 +8,7 @@ const
 
 
 
-let day = moment("2022-04-30 22:30",       "YYYY-MM-DD HH:mm");
+let day = moment("2022-05-15 08:20",       "YYYY-MM-DD HH:mm");
 console.log(day);
 
 
