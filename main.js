@@ -1,5 +1,18 @@
 
-moment.locale('ru');     
+moment.locale('ru');  
+
+// const express = require('express');
+// const path = require('path');
+
+// const app = express();
+
+// app.listen(3000);
+
+// const createPath = (page) => path.resolve(__dirname, 'views', `${page}.html`);
+
+// app.get('/', function (req, res) {
+//     res.send('Hello World')
+// })
 
 const 
     text = document.querySelector('#text'),
@@ -8,7 +21,7 @@ const
 
 
 
-let day = moment("2022-05-15 08:20",       "YYYY-MM-DD HH:mm");
+let day = moment("2022-05-22 07:36",       "YYYY-MM-DD HH:mm");
 console.log(day);
 
 
