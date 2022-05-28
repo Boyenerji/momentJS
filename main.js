@@ -1,4 +1,3 @@
-
 moment.locale('ru');  
 
 // const express = require('express');
@@ -19,9 +18,13 @@ const
     dataInput = document.querySelector('input'),
     knopa = document.querySelector('#knopa');
 
+// let dayA = moment([2022, 05, 28]);
+// let dayB = moment([2022, 05, 28]);
 
+// console.log(dayA);
+// console.log(dayB);
 
-let day = moment("2022-05-22 07:36",       "YYYY-MM-DD HH:mm");
+let day = moment("2022-05-28 15:44",       "YYYY-MM-DD HH:mm");
 console.log(day);
 
 
