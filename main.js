@@ -16,6 +16,7 @@ moment.locale('ru');
 const 
     text = document.querySelector('#text'),
     dataInput = document.querySelector('input'),
+    dataOt = document.querySelector('#dataOt'),
     knopa = document.querySelector('#knopa');
 
 // let dayA = moment([2022, 05, 28]);
@@ -25,10 +26,12 @@ const
 // console.log(dayB);
 
 let day = moment("2022-05-28 15:44",       "YYYY-MM-DD HH:mm");
-console.log(day);
+console.log(day.format('LLL'));
 
-
+dataOt.innerHTML = `${day.format('LLL')}`;
 text.innerHTML = `${day.fromNow()}`;
+
+
 
 
 function testAnim() {
