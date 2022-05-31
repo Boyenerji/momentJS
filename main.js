@@ -13,11 +13,26 @@ moment.locale('ru');
 //     res.send('Hello World')
 // })
 
+
+
+
 const 
     text = document.querySelector('#text'),
     dataInput = document.querySelector('input'),
     dataOt = document.querySelector('#dataOt'),
+    rulesHtml = document.querySelector('.rules'),
     knopa = document.querySelector('#knopa');
+
+
+const rules = [
+        'Не трогать 1',
+        'Не трогать 2',
+        'Не трогать 3'
+];
+
+rules.forEach((item) => {
+    rulesHtml.innerHTML += `<p>${item}</p>`;
+});
 
 // let dayA = moment([2022, 05, 28]);
 // let dayB = moment([2022, 05, 28]);
@@ -30,8 +45,6 @@ console.log(day.format('LLL'));
 
 dataOt.innerHTML = `${day.format('LLL')}`;
 text.innerHTML = `${day.fromNow()}`;
-
-
 
 
 function testAnim() {
@@ -47,12 +60,12 @@ function testAnim() {
 
 testAnim();
 
-knopa.addEventListener('click', () => {
-    // console.log(dataInput.value);
+// knopa.addEventListener('click', () => {
+//     // console.log(dataInput.value);
 
-    // day = moment(`${dataInput.value}`,       "YYYY-MM-DD HH:mm")
-    // console.log(day);
+//     // day = moment(`${dataInput.value}`,       "YYYY-MM-DD HH:mm")
+//     // console.log(day);
 
-    // text.innerHTML = `${day.fromNow()}`;
-});
+//     // text.innerHTML = `${day.fromNow()}`;
+// });
 
