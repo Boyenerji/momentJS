@@ -25,7 +25,7 @@ const
 // console.log(dayA);
 // console.log(dayB);
 
-let day = moment("2022-05-28 15:44",       "YYYY-MM-DD HH:mm");
+let day = moment("2022-05-31 17:57",       "YYYY-MM-DD HH:mm");
 console.log(day.format('LLL'));
 
 dataOt.innerHTML = `${day.format('LLL')}`;
