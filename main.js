@@ -34,17 +34,17 @@ rules.forEach((item) => {
     rulesHtml.innerHTML += `<p>${item}</p>`;
 });
 
-// let dayA = moment([2022, 05, 28]);
-// let dayB = moment([2022, 05, 28]);
 
-// console.log(dayA);
-// console.log(dayB);
 
-let day = moment("2022-05-31 17:57",       "YYYY-MM-DD HH:mm");
-console.log(day.format('LLL'));
+let dayA = moment("2022-05-31 17:57",       "YYYY-MM-DD HH:mm");
+let dayB = moment();
 
-dataOt.innerHTML = `${day.format('LLL')}`;
-text.innerHTML = `${day.fromNow()}`;
+let duration = moment.duration(dayB.diff(dayA));
+console.log(duration);
+
+
+dataOt.innerHTML = `${dayA.format('LLL')}`;
+text.innerHTML = `${dayA.fromNow()}`;
 
 
 function testAnim() {
@@ -60,12 +60,10 @@ function testAnim() {
 
 testAnim();
 
-// knopa.addEventListener('click', () => {
-//     // console.log(dataInput.value);
-
-//     // day = moment(`${dataInput.value}`,       "YYYY-MM-DD HH:mm")
-//     // console.log(day);
-
-//     // text.innerHTML = `${day.fromNow()}`;
-// });
+knopa.addEventListener('click', () => {
+    let 
+    days = duration._data.days,
+    hours = duration._data.hours;
+    text.innerHTML = `${days + ' days ' + hours + ' hours'}`;
+});
 
