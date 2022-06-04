@@ -9,12 +9,12 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   /* height: 100vh; */
    width: 100%;
 }
 
 
-#text, #dataOt {
+#text, #dataOt, #days {
     font-size: 9vh;
     font-weight: 600;
     text-align: center;
@@ -22,17 +22,20 @@
 }
 
 #knopa {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .rules {
     margin-top: 10px;
+    text-align: center;
 }
 
 .rules p {
     font-size: 3vh;
     font-weight: 600;
-    margin: 0;
+    margin: 5px;
+    border: 2px solid gray;
+    padding: 10px;
 }
 
 
