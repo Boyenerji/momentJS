@@ -42,7 +42,7 @@ rules.forEach((item) => {
 
 
 
-let dayA = moment("2022-06-10 17:15",       "YYYY-MM-DD HH:mm");
+let dayA = moment("2022-06-11 20:50",       "YYYY-MM-DD HH:mm");
 let dayB = moment();
 
 let duration = moment.duration(dayB.diff(dayA));
