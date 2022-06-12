@@ -21,6 +21,10 @@
     margin: 0;
 }
 
+#days {
+    font-size: 8vh;
+}
+
 #knopa {
     margin-top: 20px;
 }
