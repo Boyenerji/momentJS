@@ -44,9 +44,20 @@
     /* margin: 5px; */
     border: 2px solid gray;
     padding: 10px;
+    margin: 3px 0;
 }
 
 
 #dataOt {
     font-size: 4vh;
+}
+
+@media screen and (max-width: 700px) {
+    #text {
+        font-size: 7vh;;
+    }
+
+    .main {
+       margin: 0 5px;
+    }
 }
