@@ -26,6 +26,7 @@ const
 
 const rules = [
         'Не трогать.',
+        'Если пьяный, не пользоваться телефоном и айпадом.',
         'Не фантазировать с утра.',
         'Не скачивать любое СЗ и Telegram.',
         'Не отключать скрытие картинок на пк.',
@@ -42,7 +43,7 @@ rules.forEach((item) => {
 
 
 
-let dayA = moment("2022-07-12 20:41",       "YYYY-MM-DD HH:mm");
+let dayA = moment("2022-07-15 01:12",       "YYYY-MM-DD HH:mm");
 let dayB = moment();
 
 let duration = moment.duration(dayB.diff(dayA));
