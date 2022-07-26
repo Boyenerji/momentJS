@@ -34,7 +34,8 @@ const rules = [
         'Запрет всего АСМР.',
         'Запрет поиска шурыгиной на ютубе.',
         'Не открыть э сцены на ютубе.',
-        'Клятва перед душем, запрет ванны.'
+        'Клятва перед душем, запрет ванны.',
+        'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.'
 ];
 
 rules.forEach((item) => {
@@ -43,7 +44,7 @@ rules.forEach((item) => {
 
 
 
-let dayA = moment("2022-07-15 01:12",       "YYYY-MM-DD HH:mm");
+let dayA = moment("2022-07-26 18:30",       "YYYY-MM-DD HH:mm");
 let dayB = moment();
 
 let duration = moment.duration(dayB.diff(dayA));
