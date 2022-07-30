@@ -31,7 +31,7 @@ const rules = [
         'Не скачивать любое СЗ и Telegram.',
         'Не отключать скрытие картинок на пк.',
         'Не заходить в сафари дома(импровизация и moment)',
-        'Запрет всего АСМР.',
+        'Запрет всего АСМР (кроме beautiful).',
         'Запрет поиска шурыгиной на ютубе.',
         'Не открыть э сцены на ютубе.',
         'Клятва перед душем, запрет ванны.',
@@ -44,7 +44,7 @@ rules.forEach((item) => {
 
 
 
-let dayA = moment("2022-07-26 18:30",       "YYYY-MM-DD HH:mm");
+let dayA = moment("2022-07-30 18:23",       "YYYY-MM-DD HH:mm");
 let dayB = moment();
 
 let duration = moment.duration(dayB.diff(dayA));
