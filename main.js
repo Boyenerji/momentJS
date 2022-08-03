@@ -45,14 +45,14 @@ rules.forEach((item) => {
 
 
 let dayA = moment("2022-07-30 18:23",       "YYYY-MM-DD HH:mm");
-let dayB = moment();
+// let dayB = moment();
 
-let duration = moment.duration(dayB.diff(dayA));
-console.log(duration);
+// let duration = moment.duration(dayB.diff(dayA));
+// console.log(duration);
 
 
 dataOt.innerHTML = `${dayA.format('LLL')}`;
-text.innerHTML = `${dayA.fromNow()}`;
+// text.innerHTML = `${dayA.fromNow()}`;
 
 
 function testAnim() {
@@ -68,10 +68,26 @@ function testAnim() {
 
 testAnim();
 
-knopa.addEventListener('click', () => {
+let timerId = setInterval(() => dataPlain(), 1000);
+function dataPlain() {
+    let dayA = moment("2022-07-30 18:23",       "YYYY-MM-DD HH:mm");
+    let dayB = moment();
+
+    let duration = moment.duration(dayB.diff(dayA));
     let 
     days = duration._data.days,
     hours = duration._data.hours;
-    text.innerHTML = `${days + ' days ' + hours + ' hours'}`;
-});
+    mins = duration._data.minutes;
+    sec = duration._data.seconds;
+    text.innerHTML = `${days + 'дн ' + hours + 'ч ' + mins + 'м ' + sec + 'с'}`;
+}
+
+// knopa.addEventListener('click', () => {
+//     let 
+//     days = duration._data.days,
+//     hours = duration._data.hours;
+//     mins = duration._data.minutes;
+//     sec = duration._data.seconds;
+//     text.innerHTML = `${days + ' days ' + hours + ' hours' + mins + 'mins' + sec + 'sec'}`;
+// });
 
