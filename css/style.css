@@ -53,9 +53,10 @@
 }
 
 
-/* #dataOt {
+#dataOt {
     font-size: 4vh;
-} */
+    font-weight: 600;
+}
 
 @media screen and (max-width: 700px) {
     #text {
@@ -64,5 +65,19 @@
 
     .main {
        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #text {
+        font-size: 6vh;
+    }
+
+    #days {
+        font-size: 4vh;
+    }
+
+    #dataOt {
+        font-size: 3vh;
     }
 }

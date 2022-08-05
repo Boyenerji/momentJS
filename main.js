@@ -38,7 +38,8 @@ const rules = [
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.'
 ];
 
-rules.forEach((item) => {
+rules.forEach((item, number) => {
+    console.log(number);
     rulesHtml.innerHTML += `<p>${item}</p>`;
 });
 
