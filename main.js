@@ -63,18 +63,18 @@ function randomInteger(min, max) {
 }
 
 
-function testAnim() {
-    text.animate(
-    { 
-        color: ['rgba(106, 90, 205)', 'rgba(60, 179, 113)', 'rgba(255, 99, 71)', 'rgba(106, 90, 205)'] 
-    },
-    {
-        duration: 4000,
-        iterations: Infinity
-    }); 
-}
+// function testAnim() {
+//     text.animate(
+//     { 
+//         color: ['rgba(106, 90, 205)', 'rgba(60, 179, 113)', 'rgba(255, 99, 71)', 'rgba(106, 90, 205)'] 
+//     },
+//     {
+//         duration: 4000,
+//         iterations: Infinity
+//     }); 
+// }
 
-testAnim();
+// testAnim();
 
 let timerId = setInterval(() => dataPlain(), 1000);
 function dataPlain() {
