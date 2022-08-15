@@ -78,7 +78,7 @@ function randomInteger(min, max) {
 
 let timerId = setInterval(() => dataPlain(), 1000);
 function dataPlain() {
-    let dayA = moment("2022-07-30 18:23",       "YYYY-MM-DD HH:mm");
+    let dayA = moment("2022-08-15 23:06",       "YYYY-MM-DD HH:mm");
     let dayB = moment();
 
     let duration = moment.duration(dayB.diff(dayA));
