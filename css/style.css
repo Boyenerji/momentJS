@@ -38,6 +38,7 @@
 
 #days {
     font-size: 6vh;
+    /* margin-bottom: 20px; */
 }
 
 #knopa {
@@ -46,6 +47,7 @@
 
 .rules {
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     width: 100%;
 }
@@ -54,14 +56,14 @@
     font-size: 3vh;
     font-weight: 600;
     /* margin: 5px; */
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 10px;
     margin: 3px 0;
 }
 
 
 #dataOt {
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: 600;
 }
 

@@ -1,3 +1,5 @@
+// const moment = require('moment');
+
 moment.locale('ru');  
 
 // const express = require('express');
@@ -13,7 +15,7 @@ moment.locale('ru');
 //     res.send('Hello World')
 // })
 
-
+console.log(moment().format('LL'));
 
 
 const 
@@ -31,17 +33,25 @@ const rules = [
         'Не скачивать любое СЗ и Telegram.',
         'Не отключать скрытие картинок на пк.',
         'Не заходить в сафари дома(только moment)',
-        'Запрет всего АСМР (кроме beautiful).',
+        'Запрет всего АСМР (кроме TanyaASMR).',
         'Запрет поиска шурыгиной на ютубе.',
         'Не открыть э сцены на ютубе.',
         'Клятва перед душем, запрет ванны.',
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.'
 ];
 
-rules.forEach((item, number) => {
-    console.log(number);
-    rulesHtml.innerHTML += `<p>${item}</p>`;
-});
+// rules.forEach((item, number) => {
+//     console.log(number);
+//     rulesHtml.innerHTML += `<p>${item}</p>`;
+// });
+
+
+
+let timerTwo = setInterval(() => dataPlainTwo(), 2000);
+function dataPlainTwo() {
+    rulesHtml.innerHTML = `<p>${rules[randomInteger(0,10)]}</p>`;
+}
+
 
 
 
@@ -52,7 +62,7 @@ let dayA = moment("2022-08-20 23:35",       "YYYY-MM-DD HH:mm");
 // console.log(duration);
 
 
-dataOt.innerHTML = `${dayA.format('LLL')}`;
+dataOt.innerHTML = `${dayA.format('LLL')}` + ' → ' + `${moment().format('LL')}`;
 // text.innerHTML = `${dayA.fromNow()}`;
 
 
