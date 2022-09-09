@@ -37,7 +37,11 @@
 }
 
 #days {
-    font-size: 6vh;
+    font-size: 5.1vh;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 7px;
+    margin-top: 20px;
+    padding: 10px;
     /* margin-bottom: 20px; */
 }
 
@@ -48,8 +52,45 @@
 .rules {
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.rules img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.blockDuration {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+
+#dateStart, #dateEnd {
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #696969;
+}
+
+.tests {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tests p {
+    margin: 0;
 }
 
 .rules p {
@@ -82,11 +123,18 @@
         font-size: 6vh;
     }
 
-    #days {
-        font-size: 4vh;
+    #pRules {
+        font-size: 1.8vh;
     }
 
-    #dataOt {
+    #days {
         font-size: 3vh;
     }
+
+    #dateStart, #dateEnd {
+        font-size: 1.8vh;
+    }
+
+
+
 }

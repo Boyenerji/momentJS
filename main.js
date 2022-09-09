@@ -22,13 +22,15 @@ const
     text = document.querySelector('#text'),
     dataInput = document.querySelector('input'),
     dataOt = document.querySelector('#dataOt'),
-    rulesHtml = document.querySelector('.rules'),
-    knopa = document.querySelector('#knopa');
+    pRules = document.querySelector('#pRules'),
+    knopa = document.querySelector('#knopa'),
+    dateStart = document.querySelector('#dateStart'),
+    dateEnd = document.querySelector('#dateEnd');
 
 
 const rules = [
         'Не трогать.',
-        'Если пьяный, не пользоваться телефоном и айпадом.',
+        'Не пользоваться телефоном и айпадом пьяным',
         'Не фантазировать с утра.',
         'Не скачивать любое СЗ и Telegram.',
         'Не отключать скрытие картинок на пк.',
@@ -45,24 +47,33 @@ const rules = [
 //     rulesHtml.innerHTML += `<p>${item}</p>`;
 // });
 
-
+let timerTwoTwo = setTimeout(() => dataPlainTwoTwo(), 0);
+function dataPlainTwoTwo() {
+    pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
+}
 
 let timerTwo = setInterval(() => dataPlainTwo(), 2000);
 function dataPlainTwo() {
-    rulesHtml.innerHTML = `<p>${rules[randomInteger(0,10)]}</p>`;
+    pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
 }
 
 
 
 
+
 let dayA = moment("2022-08-20 23:35",       "YYYY-MM-DD HH:mm");
+let dayAtest = moment("2022-08-20");
+
+console.log(dayAtest);
 // let dayB = moment();
 
 // let duration = moment.duration(dayB.diff(dayA));
 // console.log(duration);
 
+dateStart.innerHTML = dayA.format('LLL');
+dateEnd.innerHTML = moment().format('LL');
 
-dataOt.innerHTML = `${dayA.format('LLL')}` + ' → ' + `${moment().format('LL')}`;
+// dataOt.innerHTML = `${dayA.format('LLL')}` + ' → ' + `${moment().format('LL')}`;
 // text.innerHTML = `${dayA.fromNow()}`;
 
 
