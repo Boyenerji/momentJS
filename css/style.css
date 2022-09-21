@@ -16,6 +16,11 @@
    /* border: 2px solid red; */
 }
 
+progress {
+    width: 100%;
+    padding: 30px;
+}
+
 
 #text, #days {
     font-size: 9vh;
@@ -76,10 +81,15 @@
 }
 
 
+.outputDate {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #dateStart, #dateEnd {
     font-size: 2.5vh;
     font-weight: 600;
-    color: #696969;
+    /* color: #696969; */
 }
 
 .tests {
