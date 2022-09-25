@@ -53,7 +53,7 @@ function dataPlainTwo() {
 
 
 let dayBB = moment();
-const dayA = moment("2022-09-21 22:08",       "YYYY-MM-DD HH:mm"),
+const dayA = moment("2022-09-24 22:23",       "YYYY-MM-DD HH:mm"),
       dayB = moment("2023-01-01 00:00",       "YYYY-MM-DD HH:mm");
 
 
