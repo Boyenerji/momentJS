@@ -33,7 +33,9 @@ const rules = [
         'Не открыть э сцены на ютубе.',
         'Клятва перед душем, запрет ванны.',
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.',
-        'Не заходить дома в телеграм.'
+        'Не заходить дома в телеграм.',
+        'Когда пьяный не использовать ПК.',
+        'Когда пьяный использовать только Ютуб.'
 ];
 
 // rules.forEach((item, number) => {
@@ -54,8 +56,8 @@ function dataPlainTwo() {
 
 
 let dayBB = moment();
-const dayA = moment("2022-10-12 18:58",       "YYYY-MM-DD HH:mm"),
-      dayB = moment("2022-12-01 00:00",       "YYYY-MM-DD HH:mm");
+const dayA = moment("2022-10-17 23:21",       "YYYY-MM-DD HH:mm"),
+      dayB = moment("2022-11-10 00:00",       "YYYY-MM-DD HH:mm");
 
 
       
