@@ -28,13 +28,12 @@ const rules = [
         'Не скачивать любое СЗ.',
         'Не отключать скрытие картинок на пк.',
         'Не заходить в сафари дома(только moment и books)',
-        'Запрет всего АСМР (кроме TanyaASMR, Ryoko).',
+        'Запрет всего АСМР (кроме TanyaASMR, Ryoko, Mar1oASMR).',
         'Запрет поиска шурыгиной на ютубе.',
         'Не открыть э сцены на ютубе.',
         'Клятва перед душем, запрет ванны.',
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.',
-        'Использовать Telegram только на улице.',
-        'Не пить.',
+        'Использовать Telegram только на улице.'
 ];
 
 // rules.forEach((item, number) => {
@@ -55,8 +54,8 @@ function dataPlainTwo() {
 
 
 let dayBB = moment();
-const dayA = moment("2022-10-27 22:25",       "YYYY-MM-DD HH:mm"),
-      dayB = moment("2022-11-01 22:25",       "YYYY-MM-DD HH:mm");
+const dayA = moment("2022-11-03 22:23",       "YYYY-MM-DD HH:mm"),
+      dayB = moment("2022-12-01 22:23",       "YYYY-MM-DD HH:mm");
 
 
       
