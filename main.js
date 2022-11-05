@@ -18,12 +18,13 @@ const
     knopa = document.querySelector('#knopa'),
     dateStart = document.querySelector('#dateStart'),
     progress = document.querySelector('progress'),
+    selectParam = document.querySelector('#selectParam'),
     dateEnd = document.querySelector('#dateEnd');
 
 
 const rules = [
         'Не трогать.',
-        'Не пользоваться телефоном и айпадом пьяным',
+        'Пьяным только ютуб.',
         'Не фантазировать с утра.',
         'Не скачивать любое СЗ.',
         'Не отключать скрытие картинок на пк.',
@@ -36,10 +37,10 @@ const rules = [
         'Использовать Telegram только на улице.'
 ];
 
-// rules.forEach((item, number) => {
-//     console.log(number);
-//     rulesHtml.innerHTML += `<p>${item}</p>`;
-// });
+rules.forEach((item, number) => {
+    console.log(item);
+    selectParam.innerHTML += `<option>${item}</option>`;
+});
 
 // let timerTwoTwo = setTimeout(() => dataPlainTwoTwo(), 0);
 // function dataPlainTwoTwo() {
@@ -47,10 +48,14 @@ const rules = [
 // }
 
 // pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
-let timerTwo = setInterval(() => dataPlainTwo(), 2000);
-function dataPlainTwo() {
-    pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
-}
+// let timerTwo = setInterval(() => dataPlainTwo(), 2000);
+// function dataPlainTwo() {
+//     pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
+// }
+
+
+
+
 
 
 let dayBB = moment();
@@ -63,7 +68,7 @@ DateOne.innerHTML = `${Math.round(moment.duration(dayBB.diff(dayA)).asHours()) +
 DateTwo.innerHTML = `${Math.round(moment.duration(dayB.diff(dayA)).asHours())  + ' ч'}`;
 
 dateStart.innerHTML = dayA.format('LLL');
-dateEnd.innerHTML = moment().format('LL');
+dateEnd.innerHTML = moment().format('LLL');
 
 // dataOt.innerHTML = `${dayA.format('LLL')}` + ' → ' + `${moment().format('LL')}`;
 // text.innerHTML = `${dayA.fromNow()}`;
