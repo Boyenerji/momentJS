@@ -28,13 +28,14 @@ const rules = [
         'Не фантазировать с утра.',
         'Не скачивать любое СЗ.',
         'Не отключать скрытие картинок на пк.',
-        'Не заходить в сафари дома(только moment и books)',
+        'Не заходить в сафари дома(только moment и books, ВКолец)',
         'Запрет всего АСМР (кроме TanyaASMR, Ryoko, Mar1oASMR, Sleep, kotlettik, poli).',
         'Запрет поиска шурыгиной на ютубе.',
         'Не открыть э сцены на ютубе.',
         'Клятва перед душем, запрет ванны.',
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.',
-        'Запрет Telegram.'
+        'Запрет Telegram.',
+        'Слушать музыку только на тренировках.'
 ];
 
 rules.forEach((item, number) => {
@@ -59,8 +60,8 @@ rules.forEach((item, number) => {
 
 
 let dayBB = moment();
-const dayA = moment("2022-11-07 20:37",       "YYYY-MM-DD HH:mm"),
-      dayB = moment("2022-12-01 22:23",       "YYYY-MM-DD HH:mm");
+const dayA = moment("2022-11-12 18:23",       "YYYY-MM-DD HH:mm"),
+      dayB = moment("2022-12-01 18:23",       "YYYY-MM-DD HH:mm");
 
 
       
