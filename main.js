@@ -35,7 +35,7 @@ const rules = [
         'Клятва перед душем, запрет ванны.',
         'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.',
         'Запрет Telegram.',
-        'Слушать музыку только на тренировках.(Кроме звонкого и арбалеты)'
+        'Слушать музыку только на тренировках.(Кроме звонкого и одиночество)'
 ];
 
 rules.forEach((item, number) => {
@@ -60,8 +60,8 @@ rules.forEach((item, number) => {
 
 
 let dayBB = moment();
-const dayA = moment("2022-12-01 22:51",       "YYYY-MM-DD HH:mm"),
-      dayB = moment("2022-12-05 08:00",       "YYYY-MM-DD HH:mm");
+const dayA = moment("2022-12-05 19:49",       "YYYY-MM-DD HH:mm"),
+      dayB = moment("2023-01-01 00:00",       "YYYY-MM-DD HH:mm");
 
 
       
