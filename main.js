@@ -62,7 +62,7 @@ rules.forEach((item, number) => {
 
 let dayBB = moment();
 const dayA = moment("2022-12-09 17:44",       "YYYY-MM-DD HH:mm"),
-      dayB = moment("2022-12-15 17:44",       "YYYY-MM-DD HH:mm");
+      dayB = moment("2022-12-20 00:00",       "YYYY-MM-DD HH:mm");
 
 
       
