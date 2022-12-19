@@ -44,20 +44,6 @@ rules.forEach((item, number) => {
     selectParam.innerHTML += `<option>${item}</option>`;
 });
 
-// let timerTwoTwo = setTimeout(() => dataPlainTwoTwo(), 0);
-// function dataPlainTwoTwo() {
-//     pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
-// }
-
-// pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
-// let timerTwo = setInterval(() => dataPlainTwo(), 2000);
-// function dataPlainTwo() {
-//     pRules.innerHTML = `${rules[randomInteger(0,10)]}`;
-// }
-
-
-
-
 
 
 let dayBB = moment();
@@ -71,10 +57,6 @@ DateTwo.innerHTML = `${Math.round(moment.duration(dayB.diff(dayA)).asHours())  +
 
 dateStart.innerHTML = dayA.format('LLL');
 dateEnd.innerHTML = moment().format('LLL');
-
-// dataOt.innerHTML = `${dayA.format('LLL')}` + ' → ' + `${moment().format('LL')}`;
-// text.innerHTML = `${dayA.fromNow()}`;
-
 
 
 function randomInteger(min, max) {
@@ -94,22 +76,25 @@ function dataPlain() {
     let duration = moment.duration(dayB.diff(dayA));
 
     progress.max = `${duration.asHours()}`;
-    console.dir(duration.asHours());
+    // console.dir(duration.asHours());
 
     //Часов осталось от одной даты к другой
     // let dayAA = moment("2022-09-21 22:08",       "YYYY-MM-DD HH:mm");
     // let dayBB = moment();
-    let durationAB = moment.duration(dayBB.diff(dayA));
-    progress.value = durationAB.asHours();
 
-    console.log(durationAB.asHours());
 
-    let 
-    days = durationAB._data.days,
-    hours = durationAB._data.hours;
-    mins = durationAB._data.minutes;
-    sec = durationAB._data.seconds;
-    text.innerHTML = `${days + 'дн ' + hours + 'ч ' + mins + 'м '}`;
+    ///коментил тут
+    // let durationAB = moment.duration(dayBB.diff(dayA));
+    // progress.value = durationAB.asHours();
+
+
+
+    // let 
+    // days = durationAB._data.days,
+    // hours = durationAB._data.hours;
+    // mins = durationAB._data.minutes;
+    // sec = durationAB._data.seconds;
+    // text.innerHTML = `${days + 'дн ' + hours + 'ч ' + mins + 'м '}`;
 }
 
 
