@@ -14,35 +14,11 @@ const
     DateTwo = document.querySelector('#DateTwo'),
     dataInput = document.querySelector('input'),
     dataOt = document.querySelector('#dataOt'),
-    pRules = document.querySelector('#pRules'),
     knopa = document.querySelector('#knopa'),
     dateStart = document.querySelector('#dateStart'),
     progress = document.querySelector('progress'),
     selectParam = document.querySelector('#selectParam'),
     dateEnd = document.querySelector('#dateEnd');
-
-
-const rules = [
-        'Не трогать.',
-        'Пьяным только ютуб.',
-        'Не фантазировать с утра.',
-        'Не скачивать любое СЗ.',
-        'Не отключать скрытие картинок на пк.',
-        'Не заходить в сафари дома(только moment и books, ВКолец)',
-        'Запрет всего АСМР (кроме TanyaASMR, Ryoko, Mar1oASMR, Sleep, kotlettik, poli).',
-        'Запрет поиска шурыгиной на ютубе.',
-        'Не открыть э сцены на ютубе.',
-        'Клятва перед душем, запрет ванны.',
-        'Запрет ТОВАРОВ ДЛЯ ВЗРОСЛЫХ озон.',
-        'Запрет Telegram.',
-        'Слушать музыку только на тренировках.(Кроме звонкого и одиночество)',
-        'Не выключать безопасный поиск в браузере'
-];
-
-rules.forEach((item, number) => {
-    console.log(item);
-    selectParam.innerHTML += `<option>${item}</option>`;
-});
 
 
 

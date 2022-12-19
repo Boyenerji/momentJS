@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
 
-app.get('https://extraordinary-moonbeam-e792a7.netlify.app/', (req, res) => {
+app.get('/', (req, res) => {
     const title = 'Главная';
     const timeNow = moment();
     // console.log(timeNow);
