@@ -17,7 +17,7 @@ mongoose
 const createPath = (page) => path.resolve(__dirname, 'ejs-views', `${page}.ejs`);
 const app = express();
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + '/public'));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
