@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="main">
+
+        <div class="forms">
+            <form action="/" method="post">
+                <% if (posts.length) { %>
+                    <% posts.forEach(({ name, datevalue }) => { %>
+                      <input type="text" placeholder="Введите текст" name="name" value="<%= name %>">
+                      <input type="datetime-local" name="datevalue">
+                    <% }) %>
+                <% } %>
+                <input type="submit" value="Изменить">
+            </form>
+        </div>
+
+        <!-- <input type="button" id="knopa" value="Другой формат"> -->
+        <p id="days">
+            <% if (posts.length) { %>
+                <% posts.forEach(({ name }) => { %>
+                  <%= name %>
+                <% }) %>
+            <% } %>
+        </p>
+
+        <div class="blockDuration bg-slate-900">
+            <div class="tests">
+                <p id="dateStart">
+                    <% if (posts.length) { %>
+                        <% posts.forEach(({ datevalue }) => { %>
+                          <%= 
+                            moment(datevalue).format("LLL")
+                           %>
+                        <% }) %>
+                    <% } %>
+                </p>
+                <p id="dateBetween2">></p>
+                <p id="dateEnd">
+                    <%= 
+                        moment(timeNow).format("LLL")
+                    %>
+                </p>
+            </div>
+            <p id="text" class="animate__animated animate__pulse animate__infinite">
+                <% if (posts.length) { %>
+                    <% posts.forEach(({ name, datevalue }) => { %>
+                        <% 
+                            let test = moment.duration(timeNow.diff(datevalue)) 
+                                days = test._data.days
+                                hours = test._data.hours
+                                mins = test._data.minutes
+                        %>
+                        <%= days + 'дн ' + hours + 'ч ' + mins + 'м' %>
+                    <% }) %>
+                <% } %>
+            </p>
+            <progress max="" value=""></progress>
+            <div class="outputDate">
+                <p id="DateOne">
+                </p>
+                <p id="DateBetween">></p>
+                <p id="DateTwo">
+                </p>
+            </div>
+        </div>
+        <!-- <div class="tests">
+            <p id="dateStart"></p>*
+            <p id="dateEnd"></p>
+        </div>
+        <p id="text" class="animate__animated animate__pulse animate__infinite"></p> -->
+
+        <!-- <p id="dataOt"></p> -->
+        <!-- <p id="dataOt"></p> -->
+        <div class="rules">
+            <select name="test" id="selectParam" class="list-inside text-lg font-medium">
+                
+            </select>
+            <img src="/public/picture1.JPG"  alt="Responsive image">
+        </div>
+
+        <!-- <img src="/IMG_0594.PNG" class="img-fluid" alt="Responsive image"> -->
+
+
+
+        <!-- <div class="rules"></div> -->
+        <!-- <input type="datetime-local" name="data"> -->
+
+    </div>
+
+   
+<script src="/main.js"></script>
+</body>
+</html>
