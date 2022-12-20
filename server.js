@@ -15,7 +15,7 @@ mongoose
     .then(() => console.log('DB OK'))
     .catch((err) => console.log('DB ERROR', err));
 
-const createPath = (page) => path.resolve(__dirname, '/views/', `${page}.ejs`);
+const createPath = (page) => path.resolve(__dirname, '/views', `${page}.ejs`);
 const app = express();
 app.set('view engine', 'ejs');
 
@@ -28,32 +28,33 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 
 app.get('/', (req, res) => {
     const title = 'Главная';
-    const timeNow = moment();
+    // const timeNow = moment();
     // console.log(timeNow);
-    UserModel
-    .find()
+    res.render(createPath('index'), { title })
+    // UserModel
+    // .find()
     // .then(posts => console.log(posts))
-    .then(posts => res.render(createPath('index'), { posts, title, timeNow, moment }))
-    .catch((error) => {
-      console.log(error);
-      res.render(createPath('error'));
-    });
+    // .then(posts => res.render(createPath('index'), { posts, title, timeNow, moment }))
+    // .catch((error) => {
+    //   console.log(error);
+    //   res.render(createPath('error'));
+    // });
 });
 
 
-app.post('/', (req, res) => {
-    const { name, datevalue } = req.body;
+// app.post('/', (req, res) => {
+//     const { name, datevalue } = req.body;
     
-    console.log(name, datevalue);
+//     console.log(name, datevalue);
 
-    UserModel
-      .findByIdAndUpdate('639f383a3936a699209e974d', { name, datevalue })
-      .then((result) => res.redirect('/'))
-      .catch((error) => {
-        console.log(error);
-        res.render(createPath('error'), { title: 'Error' });
-    });
-});
+//     UserModel
+//       .findByIdAndUpdate('639f383a3936a699209e974d', { name, datevalue })
+//       .then((result) => res.redirect('/'))
+//       .catch((error) => {
+//         console.log(error);
+//         res.render(createPath('error'), { title: 'Error' });
+//     });
+// });
 
 
 app.listen(process.env.PORT, (err) => {
