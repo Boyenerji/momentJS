@@ -15,7 +15,7 @@ mongoose
     .then(() => console.log('DB OK'))
     .catch((err) => console.log('DB ERROR', err));
 
-const createPath = (page) => path.resolve(__dirname, '/views', `${page}.ejs`);
+const createPath = (page) => path.resolve(__dirname, '/views/', `${page}.ejs`);
 const app = express();
 app.set('view engine', 'ejs');
 
