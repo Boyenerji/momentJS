@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejs = require('ejs');
+require('dotenv').config();
 const morgan = require('morgan');
 const moment = require('moment');
 moment.locale('ru');  
@@ -14,8 +15,7 @@ mongoose
     .then(() => console.log('DB OK'))
     .catch((err) => console.log('DB ERROR', err));
 
-// const createPath = (page) => path.resolve(__dirname, '/views', `${page}.ejs`);
-const createPath = (page) => path.resolve(__dirname, '', `${page}.ejs`);
+const createPath = (page) => path.resolve(__dirname, '/views', `${page}.ejs`);
 const app = express();
 app.set('view engine', 'ejs');
 
@@ -58,5 +58,5 @@ app.post('/', (req, res) => {
 
 app.listen(process.env.PORT, (err) => {
     if (err) return console.log(err);
-    console.log('Server ok');
+    console.log(`listening port ${process.env.PORT}`);
 });
