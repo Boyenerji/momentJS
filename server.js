@@ -33,19 +33,15 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 app.get('/', (req, res) => {
     const title = 'Главная';
 
-    // const datelol = '22.13.22 14dasdsadasdasdsa:30dsdasdsad';
+    let timeNow;
 
-    // console.log(moment(datelol, 'DD.MM.YY HH:mm').format());
+    if (req.headers.host === 'localhost:4444') {
+      timeNow = moment()
+    } else {
+      const hours = 'hours';
+      timeNow = moment().subtract(2, hours);
+    }
 
-    // console.log(moment([2022, 0, 21]))
-
-    // console.log(validator.isEmail('foo@bar.com'));
-    // res.render(createPath('test'));
-
-    const hours = 'hours';
-    const timeNow = moment();
-    
-    // console.log(timeNow);
     UserModel
     .find()
     // .then(posts => console.log(posts))
@@ -54,6 +50,7 @@ app.get('/', (req, res) => {
       console.log(error);
       res.render(createPath('error'));
     });
+    
 });
 
 
