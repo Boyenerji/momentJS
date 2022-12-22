@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="main">
+
+        <!-- <div class="forms">
+            <form action="/" method="post">
+                <% if (posts.length) { %>
+                    <% posts.forEach(({ name, datevalue }) => { %>
+                      <input type="text" placeholder="<%= name %>" name="name" class="inputDate">
+                      <input type="datetime-local" name="datevalue">
+                    <% }) %>
+                <% } %>
+                <input type="submit" value="Изменить">
+            </form>
+        </div> -->
+
+        <!-- <input type="button" id="knopa" value="Другой формат"> -->
+        <p id="days">
+            <% if (posts.length) { %>
+                <% posts.forEach(({ name }) => { %>
+                  <%= name %>
+                <% }) %>
+            <% } %>
+        </p>
+
+        <div class="blockDuration">
+            <div class="tests">
+                <p id="dateStart">
+                    <% if (posts.length) { %>
+                        <% posts.forEach(({ datevalue }) => { %>
+                        <% console.log(datevalue) %>
+                          <%= 
+                            moment(datevalue).format("LLL")
+                            // datevalue
+                           %>
+                        <% }) %>
+                    <% } %>
+                </p>
+                <!-- <p id="dateBetween2">></p> -->
+                <!-- <p id="dateEnd">
+                    <%= 
+                        moment(timeNow).format("LLL")
+                    %>
+                </p> -->
+            </div>
+            <p id="text" class="animate__animated animate__pulse animate__infinite">
+                <% if (posts.length) { %>
+                    <% posts.forEach(({ name, datevalue }) => { %>
+                        <% 
+                            let test = moment.duration(timeNow.diff(datevalue))
+                                // console.log(test);
+                                // test._milliseconds = test._milliseconds - 7200000;
+                                // console.log(test._milliseconds);
+                                days = test._data.days
+                                hours = test._data.hours
+                                mins = test._data.minutes
+                        %>
+                        <%= days + 'дн ' + hours + 'ч ' + mins + 'м'
+                            
+                        %>
+                    <% }) %>
+                <% } %>
+            </p>
+            <progress max="" value=""></progress>
+            <div class="outputDate">
+                <p id="dateEnd">
+                    <%= 
+                        moment(timeNow).format("LLL")
+                    %>
+                </p>
+                <!-- <p id="DateOne">
+                </p>
+                <p id="DateBetween">></p>
+                <p id="DateTwo">
+                </p> -->
+            </div>
+        </div>
+        <!-- <div class="tests">
+            <p id="dateStart"></p>*
+            <p id="dateEnd"></p>
+        </div>
+        <p id="text" class="animate__animated animate__pulse animate__infinite"></p> -->
+
+        <!-- <p id="dataOt"></p> -->
+        <!-- <p id="dataOt"></p> -->
+
+
+        <!-- <div class="rules"> -->
+
+
+        
+            <button type="button" id='btnEdit' class="btn" data-toggle="modal" data-target="#exampleModal">
+                Изменить
+            </button>
+  
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Изменить дату</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="forms">
+                            <form action="/" method="post" class="formEdit">
+                                <% if (posts.length) { %>
+                                    <% posts.forEach(({ name, datevalue }) => { %>
+                                      <input type="text" placeholder="<%= name %>" name="name" class="inputDate">
+                                      <input 
+                                            type="text" 
+                                            name="datevalue" 
+                                            class="inputDateLocal" 
+                                            value="<%= moment(timeNow).format("l") + ' ' + moment(timeNow).format("LT") %>">
+                                    <% }) %>
+                                <% } %>
+                                <!-- <input type="submit" value="Изменить"> -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input type="submit" class="inputEdit" value="Изменить">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success text-success">Сохранить</button>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+
+
+
+            <script>
+
+                // const lols = document.querySelector('.lol');
+
+                // lols.addEventListener('click', () => {
+
+
+                //     let user = {
+                //         fisrtname: 'John',
+                //         surname: 'Smith'
+                //     };
+
+                //         let response = fetch('/', {
+                //         method: 'POST',
+                //         headers: {
+                //             'Content-Type': 'application/json;charset=utf-8'
+                //         },
+                //         body: JSON.stringify(user)
+                //         });
+
+                        // let result = response.json();
+                        // console.log(result);
+
+                    // const postData = async (url = '', data = {}) => {
+                    //     // Формируем запрос
+                    //     const response = await fetch(url, {
+                    //         method: 'POST',
+                    //     headers : { 
+                    //         'Content-Type': 'application/json',
+                    //         'Accept': 'application/json'
+                    //     },
+                    //         body: JSON.stringify(data)
+                    //     });
+                    //         return response.json(); 
+                    //     }
+
+                    //     console.log('test');
+                    // postData('http://localhost:4444/', { answer: 42 })
+                    // .then((data) => {
+                    //     console.log(data); 
+                    // });
+
+                    
+                // });
+
+
+            </script>
+  
+        <!-- </div> -->
+
+        <!-- <img src="/IMG_0594.PNG" class="img-fluid" alt="Responsive image"> -->
+
+
+
+        <!-- <div class="rules"></div> -->
+        <!-- <input type="datetime-local" name="data"> -->
+
+    </div>
+
+   
+<!-- <script src="/main.js"></script> -->
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
