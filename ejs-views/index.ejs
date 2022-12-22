@@ -147,48 +147,31 @@
 
             <script>
 
-                // const lols = document.querySelector('.lol');
+                
 
-                // lols.addEventListener('click', () => {
+            // ✅ works
+            // async function sendData() {
 
+            //     let user = {
+            //         name: 'John',
+            //         surname: 'Smith'
+            //     };
 
-                //     let user = {
-                //         fisrtname: 'John',
-                //         surname: 'Smith'
-                //     };
+            //     let response = await fetch('/', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json;charset=utf-8'
+            //     },
+            //         body: JSON.stringify(user)
+            //     });
 
-                //         let response = fetch('/', {
-                //         method: 'POST',
-                //         headers: {
-                //             'Content-Type': 'application/json;charset=utf-8'
-                //         },
-                //         body: JSON.stringify(user)
-                //         });
+                
+            //     let result = await response.json();
+            //     console.log(result);
 
-                        // let result = response.json();
-                        // console.log(result);
+            // }
 
-                    // const postData = async (url = '', data = {}) => {
-                    //     // Формируем запрос
-                    //     const response = await fetch(url, {
-                    //         method: 'POST',
-                    //     headers : { 
-                    //         'Content-Type': 'application/json',
-                    //         'Accept': 'application/json'
-                    //     },
-                    //         body: JSON.stringify(data)
-                    //     });
-                    //         return response.json(); 
-                    //     }
-
-                    //     console.log('test');
-                    // postData('http://localhost:4444/', { answer: 42 })
-                    // .then((data) => {
-                    //     console.log(data); 
-                    // });
-
-                    
-                // });
+            // sendData();
 
 
             </script>
@@ -205,7 +188,7 @@
     </div>
 
    
-<!-- <script src="/main.js"></script> -->
+<script src="/main.js"></script>
 <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

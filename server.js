@@ -71,10 +71,9 @@ app.post('/', (req, res) => {
           res.render(createPath('error'), { title: 'Error' });
       });
     } else {
-      title = 'Ошибка';
       res
       .status(404)
-      .render(createPath('error'), { title });
+      res.send('<p>some html</p>')
     }
 
 });
