@@ -13,19 +13,8 @@
 <body>
     <div class="main">
 
-        <!-- <div class="forms">
-            <form action="/" method="post">
-                <% if (posts.length) { %>
-                    <% posts.forEach(({ name, datevalue }) => { %>
-                      <input type="text" placeholder="<%= name %>" name="name" class="inputDate">
-                      <input type="datetime-local" name="datevalue">
-                    <% }) %>
-                <% } %>
-                <input type="submit" value="Изменить">
-            </form>
-        </div> -->
 
-        <!-- <input type="button" id="knopa" value="Другой формат"> -->
+
         <p id="days">
             <% if (posts.length) { %>
                 <% posts.forEach(({ name }) => { %>
@@ -90,100 +79,50 @@
             <p id="dateStart"></p>*
             <p id="dateEnd"></p>
         </div>
-        <p id="text" class="animate__animated animate__pulse animate__infinite"></p> -->
+
 
         <!-- <p id="dataOt"></p> -->
         <!-- <p id="dataOt"></p> -->
-
-
-        <!-- <div class="rules"> -->
-
 
         
-            <button type="button" id='btnEdit' class="btn" data-toggle="modal" data-target="#exampleModal">
-                Изменить
-            </button>
+        <button type="button" id='btnEdit' class="btn" data-toggle="modal" data-target="#exampleModal">
+            Изменить
+        </button>
   
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Изменить дату</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="forms">
-                            <form action="/" method="post" class="formEdit">
-                                <% if (posts.length) { %>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Изменить дату</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="forms">
+                                <form action="/" method="post" class="formEdit">
+                                    <% if (posts.length) { %>
                                     <% posts.forEach(({ name, datevalue }) => { %>
-                                      <input type="text" placeholder="<%= name %>" name="name" class="inputDate">
-                                      <input 
-                                            type="text" 
-                                            name="datevalue" 
-                                            class="inputDateLocal" 
-                                            value="<%= moment(timeNow).format("l") + ' ' + moment(timeNow).format("LT") %>">
+                                    <input type="text" placeholder="<%= name %>" name="name" class="inputDate">
+                                    <input type="text" name="datevalue" class="inputDateLocal"
+                                        value="<%= moment(timeNow).format("l") + ' ' + moment(timeNow).format("LT") %>">
                                     <% }) %>
-                                <% } %>
-                                <!-- <input type="submit" value="Изменить"> -->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <input type="submit" class="inputEdit" value="Изменить">
-                                </div>
-                            </form>
+                                    <% } %>
+                                    <!-- <input type="submit" value="Изменить"> -->
+                                    <div class="modal-footer">
+                                        <input type="input" class="showButton">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <input type="submit" class="inputEdit" value="Изменить">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success text-success">Сохранить</button>
-                    </div> -->
-                </div>
                 </div>
             </div>
-
-
-
-            <script>
-
-                
-
-            // ✅ works
-            // async function sendData() {
-
-            //     let user = {
-            //         name: 'John',
-            //         surname: 'Smith'
-            //     };
-
-            //     let response = await fetch('/', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json;charset=utf-8'
-            //     },
-            //         body: JSON.stringify(user)
-            //     });
-
-                
-            //     let result = await response.json();
-            //     console.log(result);
-
-            // }
-
-            // sendData();
-
-
-            </script>
-  
-        <!-- </div> -->
-
-        <!-- <img src="/IMG_0594.PNG" class="img-fluid" alt="Responsive image"> -->
-
-
-
-        <!-- <div class="rules"></div> -->
-        <!-- <input type="datetime-local" name="data"> -->
 
     </div>
 

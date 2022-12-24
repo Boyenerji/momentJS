@@ -2,7 +2,9 @@ const body = document.querySelector('body'),
       blockDuration = document.querySelector('.blockDuration'),
       days = document.querySelector('#days'),
       dateStart = document.querySelector('#dateStart'),
-      outputDate = document.querySelector('.outputDate');
+      outputDate = document.querySelector('.outputDate'),
+      showButton = document.querySelector('.showButton'),
+      main = document.querySelector('.main');
 
 
 
@@ -22,3 +24,21 @@ function DarkTheme() {
 }
 
 
+showButton.addEventListener('input', (e) => {
+
+    if (showButton.value == 'ZnFa1998') {
+        showButton.remove();
+
+        const arrayRules = ['Запрет фантазий', 'Не смотреть']
+
+        let div = document.createElement('div');
+        div.className = "rules";
+
+        arrayRules.forEach(element => {
+            div.innerHTML += `<p>${element}</p>`;
+            main.append(div)
+        });
+    }
+
+
+});

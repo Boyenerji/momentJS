@@ -11,9 +11,6 @@ mongoose.set('strictQuery', false);
 const UserModel = require('./models/User.js');
 
 
-
-
-
 mongoose
     .connect('mongodb+srv://bratik026:ZnFa1997@cluster0.4oaxb.mongodb.net/blogtwo?retryWrites=true&w=majority')
     .then(() => console.log('DB OK'))
