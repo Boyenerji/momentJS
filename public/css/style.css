@@ -135,6 +135,16 @@ progress {
 
 .showButton {
     font-weight: 600;
+    width: 50%;
+    padding: 4px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(241 245 249);
+}
+
+.divShowButton {
+    display: flex;
+    justify-content: center;
 }
 
 .rules img {
